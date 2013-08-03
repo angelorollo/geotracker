@@ -57,6 +57,9 @@ function geotracker_page() {
           id:'geotracker_reset',
           onclick:'geotracker_reset()'
         }
+      },
+      message:{
+        markup:'<div id="geotracker_message"></div>'
       }
     };
     return content;
@@ -77,7 +80,7 @@ function geotracker_start() {
       {enableHighAccuracy:true}
     );
     // Tracking trip...
-    $('#geotracker_message').prepend('<p>Logger tur...</p>');
+    $('#geotracker_message').prepend('<p>Geo tracking started...</p>');
     geotracker_started = true;
     return false;
   }
